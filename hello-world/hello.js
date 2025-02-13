@@ -1,1 +1,4 @@
-console.log("Hello1");
+const { add, sub } = require("./math");
+
+console.log(add(2, 3));
+console.log(sub(9, 3));
