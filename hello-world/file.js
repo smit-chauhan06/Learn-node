@@ -1,10 +1,21 @@
 const fs = require("fs");
 
-fs.writeFileSync("./test.txt", "Hello");
+// fs.writeFileSync("./test.txt", "hey there");
+// fs.writeFile("./test.txt", "hey there async", (err) => {});
 
-fs.writeFile("./test.txt", "Hello asc", (err) => {
-  console.log("err======>>>>>", err);
-});
+// const result = fs.readFileSync("./contact.txt", "utf-8");
+// console.log("🚀 ~ result:", result);
 
-const data = fs.readFileSync("./test.txt", "utf-8");
-console.log("data======>>>>>", data);
+// fs.readFile("./contact.txt", "utf-8", (err, res̥ult) => {
+//   if (err) {
+//     console.log("🚀 ~ fs.readFile ~ err:", err);
+//   } else {
+//     console.log("🚀 result", res̥ult);
+//   }
+// });
+
+fs.appendFileSync("./test.txt", `${Date.now()} Hey Heloo\n`);
+
+fs.cpSync("./test.txt", "./copy.txt");
+
+console.log(fs.statSync("./test.txt").isFile());
