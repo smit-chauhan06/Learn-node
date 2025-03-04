@@ -19,3 +19,6 @@ fs.appendFileSync("./test.txt", `${Date.now()} Hey Heloo\n`);
 fs.cpSync("./test.txt", "./copy.txt");
 
 console.log(fs.statSync("./test.txt").isFile());
+
+const os = require("os");
+console.log("os======>>>>>", os.cpus().length);
